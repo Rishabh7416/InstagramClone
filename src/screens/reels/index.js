@@ -1,15 +1,13 @@
-import {View, Text, FlatList} from 'react-native';
 import React from 'react';
+import {View, Image} from 'react-native';
 import {reelStyles} from './styles';
 import Reels from '../../components/reels';
-
+import localimages from '../../utils/localimages';
 
 export default function ReelsScreen() {
-  const _renderItem = () => <Reels />;
   return (
     <View style={reelStyles.container}>
       <Reels />
-      {/* <FlatList data={['', '']} renderItem={_renderItem} pagingEnabled /> */}
     </View>
   );
 }
