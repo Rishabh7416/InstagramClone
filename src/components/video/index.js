@@ -1,26 +1,23 @@
 import Video from 'react-native-video';
 import {useFocusEffect} from '@react-navigation/native';
-import React, {useRef, useCallback, useState} from 'react';
+import React, {useRef, useCallback, useState, useEffect} from 'react';
 
 export default function VideoPlayer() {
   const vidRef = useRef(null);
-  const [status, setStatus] = useState(false);
+  const [duration, setDuration] = useState(0);
 
   useFocusEffect(
     useCallback(() => {
-      setStatus(true);
-      vidRef.current.seek(0);
-      return () => setStatus(false);
+      if (Math.round(duration) > 0) {
+        console.log('if');
+        vidRef.current.seek(0);
+      }
     }, []),
   );
 
-  const resetPlayer = value => {
-    vidRef.current = value;
-  };
-
   return (
     <Video
-      ref={value => resetPlayer(value)}
+      ref={value => (vidRef.current = value)}
       source={{
         uri: 'https://www.w3schools.com/html/mov_bbb.mp4',
       }}
@@ -28,6 +25,7 @@ export default function VideoPlayer() {
         flex: 1,
       }}
       repeat={true}
+      onProgress={({currentTime}) => setDuration(currentTime)}
       resizeMode={'cover'}
     />
   );
