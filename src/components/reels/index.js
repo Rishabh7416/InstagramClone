@@ -7,7 +7,7 @@ import VideoPlayer from '../video';
 export default function Reels() {
   return (
     <View style={customReelStyles.container}>
-      <VideoPlayer />
+      {/* <VideoPlayer /> */}
       <ReelFooter />
     </View>
   );

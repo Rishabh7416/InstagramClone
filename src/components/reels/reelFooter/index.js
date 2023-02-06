@@ -1,104 +1,59 @@
-import {View, Text, TouchableOpacity, Image} from 'react-native';
-import React from 'react';
-import {normalize} from '../../../utils/dimensions';
-import localimages from '../../../utils/localimages';
 import UserInfo from '../userInfo';
+import React, {useState} from 'react';
+import {reelFooterStyle} from './styles';
+import localimages from '../../../utils/localimages';
+import {View, Text, TouchableOpacity, Image} from 'react-native';
 
 export default function ReelFooter() {
+  const [visible, setVisible] = useState(false);
+  
   return (
-    <View
-      style={{
-        // height: normalize(50),
-        flexDirection: 'row',
-        flex: 1,
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0,
-      }}>
+    <View style={reelFooterStyle.container}>
       <UserInfo />
-      <View style={{justifyContent: 'space-between',}}>
+      <View style={reelFooterStyle.innerContainer}>
         <TouchableOpacity
-          style={{
-            width: 50,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+          onPress={() => setVisible(!visible)}
+          style={reelFooterStyle.shareContainer}>
           <Image
             source={localimages.messageIcon}
-            style={{height: 22, width: 22}}
+            style={reelFooterStyle.shareIconStyle}
           />
         </TouchableOpacity>
         <View>
-          <TouchableOpacity
-            style={{
-              width: 50,
-              height: 45,
-              alignItems: 'center',
-              justifyContent: 'space-between',
-            }}>
+          <TouchableOpacity style={reelFooterStyle.likeContainer}>
             <Image
               source={localimages.heartIcon}
-              style={{height: 25, width: 25}}
+              style={reelFooterStyle.likeIconStyle}
             />
             <TouchableOpacity>
               <Text style={{fontSize: 10}}>{'7,597'}</Text>
             </TouchableOpacity>
           </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: 50,
-              height: 45,
-              marginVertical: 15,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+          <TouchableOpacity style={reelFooterStyle.comment}>
             <Image
               source={localimages.commentIcon}
-              style={{height: 30, width: 30}}
+              style={reelFooterStyle.commentIconStyle}
             />
             <TouchableOpacity>
               <Text style={{fontSize: 10}}>{'22'}</Text>
             </TouchableOpacity>
           </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: 50,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+          <TouchableOpacity style={reelFooterStyle.shareContainer}>
             <Image
               source={localimages.messageIcon}
-              style={{height: 22, width: 22}}
+              style={reelFooterStyle.shareIconStyle}
             />
           </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: 50,
-              marginVertical: 20,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+          <TouchableOpacity style={reelFooterStyle.menuContainer}>
             <Image
               source={localimages.menuIcon}
-              style={{height: 15, width: 15}}
+              style={reelFooterStyle.menuIconStyle}
             />
           </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: 40,
-              height: 40,
-              borderWidth: 1,
-              borderRadius: 10,
-              marginVertical: 20,
-              alignSelf: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
+          <TouchableOpacity style={reelFooterStyle.informationContainer}>
             <Image
               source={localimages.informationIcon}
-              style={{height: 15, width: 15}}
+              style={reelFooterStyle.infoIconStyle}
             />
           </TouchableOpacity>
         </View>
