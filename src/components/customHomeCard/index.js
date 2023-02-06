@@ -26,7 +26,7 @@ export default function CustomHomeCard({...props}) {
   );
 
   return (
-    <View style = {{marginVertical: normalize(15)}}>
+    <View style = {{marginVertical: normalize(15),}}>
       <PostHeader
         openModal={() => setVisible(!visible)}
         username={username}
