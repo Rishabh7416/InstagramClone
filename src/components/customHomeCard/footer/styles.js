@@ -19,13 +19,13 @@ export const postFooterStyles = StyleSheet.create({
   likeIconStyle: {
     height: normalize(20),
     width: normalize(20),
-    marginRight: normalize(7),
+    // marginRight: normalize(7),
   },
 
   commentIconStyle: {
     height: normalize(25),
     width: normalize(25),
-    marginRight: normalize(7),
+    // marginRight: normalize(7),
   },
 
   messageIconStyle: {
@@ -39,7 +39,10 @@ export const postFooterStyles = StyleSheet.create({
   },
 
   commonStyle: {
+    // backgroundColor: 'red',
+    width: '25%',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between'
   },
 });
