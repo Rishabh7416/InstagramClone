@@ -3,10 +3,11 @@ import React, {useState} from 'react';
 import {reelFooterStyle} from './styles';
 import localimages from '../../../utils/localimages';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
+import BottoSheet from '../../bottomSheet';
 
 export default function ReelFooter() {
   const [visible, setVisible] = useState(false);
-  
+
   return (
     <View style={reelFooterStyle.container}>
       <UserInfo />
@@ -44,7 +45,9 @@ export default function ReelFooter() {
               style={reelFooterStyle.shareIconStyle}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={reelFooterStyle.menuContainer}>
+          <TouchableOpacity
+            style={reelFooterStyle.menuContainer}
+            onPress={() => setVisible(!visible)}>
             <Image
               source={localimages.menuIcon}
               style={reelFooterStyle.menuIconStyle}
@@ -58,6 +61,7 @@ export default function ReelFooter() {
           </TouchableOpacity>
         </View>
       </View>
+      <BottoSheet visible = {visible}/>
     </View>
   );
 }
