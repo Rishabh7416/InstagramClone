@@ -10,11 +10,12 @@ export const textInputStyle = StyleSheet.create({
   customStyle: {
     fontWeight: 'bold',
     fontSize: normalize(12),
-    // backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
-    // borderWidth: 1,
+    borderWidth: 0.5,
+    borderColor: 'grey',
     height: normalize(50),
-    // marginTop: 50
+    borderRadius: normalize(6),
+    paddingHorizontal: normalize(10)
   },
 });
