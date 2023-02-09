@@ -8,7 +8,7 @@ export const textInputStyle = StyleSheet.create({
     // backgroundColor: 'red'
   },
   customStyle: {
-    fontWeight: 'bold',
+    fontWeight: '500',
     fontSize: normalize(12),
     alignItems: 'center',
     justifyContent: 'center',

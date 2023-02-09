@@ -20,9 +20,11 @@ const CustomTextInput = ({...props}) => {
       <TextInput
         ref={props.refer}
         value={props.value}
+        autoCorrect={props.autoCorrect}
         placeholder={props.placeholder}
         onChangeText={props.onChangeText}
         placeholderTextColor={'darkgrey'}
+        autoCapitalize={props.autoCapitalize}
         style={[textInputStyle.customStyle, props.customStyle]}
       />
     </View>
@@ -36,6 +38,5 @@ const styles = StyleSheet.create({
     height: normalize(50),
     // borderWidth: 1,
     justifyContent: 'center',
-    marginTop: 30,
   },
 });

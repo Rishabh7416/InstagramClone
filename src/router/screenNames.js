@@ -4,4 +4,5 @@ export default {
   Profile: 'Profile',
   Reels: 'Reels',
   Notification: 'Notification',
+  SignUp: 'SignUp'
 };

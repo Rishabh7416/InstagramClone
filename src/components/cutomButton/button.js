@@ -1,10 +1,14 @@
 import React from 'react';
+import {normalize} from '../../utils/dimensions';
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 export default function CustomButton({...props}) {
   return (
-    <TouchableOpacity style={styles.container} onPress = {props.onPress}>
-      <Text>Register</Text>
+    <TouchableOpacity style={styles.container} onPress={props.onPress}>
+      <Text
+        style={{fontSize: normalize(16), fontWeight: 'bold', color: 'white'}}>
+        Log in
+      </Text>
     </TouchableOpacity>
   );
 }
@@ -12,11 +16,12 @@ export default function CustomButton({...props}) {
 const styles = StyleSheet.create({
   container: {
     alignSelf: 'center',
-    borderWidth: 0.5,
     alignItems: 'center',
     justifyContent: 'center',
-    height: 50,
-    width: 150,
-    borderRadius: 10,
+    height: normalize(40),
+    width: '100%',
+    borderRadius: normalize(5),
+    backgroundColor: '#3997F0',
+    marginTop: normalize(40)
   },
 });

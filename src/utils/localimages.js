@@ -20,4 +20,5 @@ export default {
   homeActiveIcon: require('../assets/images/homeActive.png'),
   homeInactionIcon: require('../assets/images/homeInactive.png'),
   reelInactiveIcon: require('../assets/images/reelInactive.png'),
+  instagramLogoIcon: require('../assets/images/instagramLogo.png'),
 };

@@ -11,10 +11,10 @@ export default function HomeScreen() {
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
       <FlatList
+        data={storyData}
         renderItem={_renderItem}
         ListHeaderComponent={_listHeader}
         showsVerticalScrollIndicator={false}
-        data={storyData}
       />
     </View>
   );
