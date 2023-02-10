@@ -21,4 +21,8 @@ export default {
   homeInactionIcon: require('../assets/images/homeInactive.png'),
   reelInactiveIcon: require('../assets/images/reelInactive.png'),
   instagramLogoIcon: require('../assets/images/instagramLogo.png'),
+  eComSearchIcon: require('../assets/images/eComSearchIcon.png'),
+  eComFilterIcon: require('../assets/images/eComFilterIcon.png'),
+  eComCategoryIcon: require('../assets/images/eComCategoryIcon.png'),
+  eComSearch: require('../assets/images/eComSearch.png'),
 };
